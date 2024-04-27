@@ -8,9 +8,9 @@
 :root {
     --SoftBlue: rgb(139, 172, 218);
     --Cyan: rgb(0, 255, 247);
-    --VDB-mainBG: rgb(13, 25, 43);
-    --VDB-cardBG: hwb(214 8% 75%);
-    --VDB-line: rgb(13, 25, 43);
+    --VDB-mainBG: rgb(13, 26, 45);
+    --VDB-cardBG: rgb(20, 39, 64);
+    --VDB-line: rgb(12, 23, 41);
     --White: rgb(255, 255, 255);
 }
 
@@ -40,13 +40,40 @@ a {
 }
 
 .image {
-    width: 100%;
-    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    background-image: url('images/image-equilibrium.jpg');
+    background-size: cover;
 }
 
-.image img {
-    max-width: 100%;
-    border-radius: 5px;
+.eye {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url('images/icon-view.svg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.color {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: var(--Cyan);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.image:hover .eye {
+    opacity: 1;
+}
+
+.image:hover .color {
+    opacity: 0.5;
 }
 
 .txt {
